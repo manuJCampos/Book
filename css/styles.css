@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Chocolate Classical Sans", serif;
+}
+:root{
+    --color-primary: #0094f7;
+}
+html, body{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+main{
+    height: 100%;
+    overflow: scroll;
+    scroll-snap-align: start;
+}
+header{
+    position: absolute;
+    margin-top: 20px;
+    height: 50px;
+    z-index: 10;
+}
+header img{
+    margin-left: 50px;
+    height: 100%;
+}
+.hero-section{
+    position: relative;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    font-size: 32px;
+    text-align: center;
+    padding-top: 1dvh;
+}
+.hero-subtitle{
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+    font-weight: 500;
+}
+button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--color-primary);
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 7px 7px #0094f7;
+}
+.hero-footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background-color: var(--color-primary);
+}
+.container-footer-characteristics{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.container-footer-characteristics h5{
+    color: white;
+    font-size: 12px;
+}
+.section-steps{
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+h2{
+    text-align: center;
+}
+.description-steps{
+    text-align: center;
+    max-width:650px;
+    margin-inline: auto;
+    margin-top: 40px;
+    font-size: 14px;
+}
+.container-steps{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    overflow: hidden;
+}
+.container-steps::before{
+    content: "";
+    width: 120%;
+    height: 60%;
+    position: absolute;
+    background-image: conic-gradient(var(--color-primary) 80deg, transparent, transparent, transparent);
+    opacity: 0;
+}
+.container-steps.animate::before{
+    animation: rotate 3s ease-in forwards;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(-20deg);
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+}
+.container-steps::after{
+    content: "";
+    position: absolute;
+    width: 99%;
+    height: 97;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #fff;
+    outline: 2px solid #5554;
+    outline-offset: 2px;
+    border-radius: 7px;
+}
+.container-step{
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+}
+.container-step:not(:last-child){
+    border-right: 2px solid #5554;
+}
+.container-step img{
+    display: block;
+    width: 70px;
+    margin: 0 auto;
+}
+.container-step h3{
+    text-align: center;
+    margin-top: 30px;
+}
+.container-step p{
+    font-size: 14;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+.section-benefits{
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.conatainer-benefits{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    opacity: 0;
+}
+.conatainer-benefits.animate{
+    animation: appear 1.5s ease-in-out forwards;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.conatainer-benefit{
+    flex-basis: 33%;
+    padding: 20px;
+    position: relative;
+}
+.conatainer-benefit:nth-of-type(5)::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #0094f7;
+}
+.animate::before{
+    animation: displacement 1.2s ease-in-out .5s forwards;
+}
+@keyframes displacement{
+    from{
+        width: 0;
+        to{
+            width: 100%;
+        }
+    }
+}
+.conatainer-benefit img{
+    display: block;
+    margin-inline: auto;
+    object-fit: cover;
+}
+.conatainer-benefit:nth-of-type(5).animate img{
+    animation: changeColor .5s ease-in 1s forwards;
+}
+@keyframes changeColor{
+    from{
+        filter: invert(0);
+    }
+    to{
+        filter: invert(1);
+    }
+}
+.conatainer-benefit h4{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55%;
+    text-align: center;
+}
+.conatainer-benefit:nth-of-type(5).animate h4{
+    animation: moveTitle .5s ease-in-out 1s forwards;
+}
+@keyframes moveTitle{
+    from{
+        top: 55%;
+    }
+    to{
+       top: 45%; 
+       color: #fff;
+    }
+}
+.conatainer-benefit p{
+    scale: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 50px;
+}
+.conatainer-benefit:nth-of-type(5).animate p{
+    animation: visibleDescription .5s linear 1s forwards;    
+}
+@keyframes visibleDescription{
+    from{
+        scale: 0;
+        opacity: 0;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
