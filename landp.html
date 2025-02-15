@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="" alt="">
+    </header>
+    <main>
+        <section class="hero-section">
+            <h1></h1>
+            <p class="hero-subtitle"></p>
+            <button>CTA Llamativo</button>
+            <footer class="hero-footer">
+                <div class="container-footer-characteristics">
+                    <img src="" alt="">
+                    <h5>Caracteristicas 1</h5>
+                </div>
+                <div class="container-footer-characteristics">
+                    <img src="" alt="">
+                    <h5>Caracteristicas 2</h5>
+                </div>
+            </footer>
+        </section>
+        <section class="section-steps">
+            <h2></h2>
+            <p></p>
+            <div class="container-steps">
+                <div class="container-step">
+                    <img src="" alt="">
+                    <h3>Pasos a seguir</h3>
+                    <p></p>
+                </div>
+                <div class="container-step">
+                    <img src="" alt="">
+                    <h3>Pasos a seguir</h3>
+                    <p></p>
+                </div>
+                <div class="container-step">
+                    <img src="" alt="">
+                    <h3>Pasos a seguir</h3>
+                    <p></p>
+                </div>
+            </div>
+            <button>CTA Llamativo</button>
+        </section>
+        <section class="section-benefits">
+            <h2>Más Beneficios</h2>
+            <div class="container-benefits">
+                <div class="container-benefit">
+                    <img src="" alt="">
+                    <h4>Beneficio 1</h4>
+                    <p></p>
+                    <div class="container-benefit">
+                        <img src="" alt="">
+                        <h4>Beneficio 2</h4>
+                        <p></p>
+                    </div>
+                    <div class="container-benefit">
+                        <img src="" alt="" width="50px" height="32">
+                        <h4>Beneficio 3</h4>
+                        <p></p>
+                    </div>
+                    <div class="container-benefit">
+                        <img src="" alt="">
+                        <h4>Beneficio 4</h4>
+                        <p></p>
+                    </div>
+                    <div class="container-benefit">
+                        <img src="" alt="">
+                        <h4>Beneficio 6</h4>
+                        <p></p>
+                    </div>
+                    <div class="container-benefit">
+                        <img src="" alt="">
+                        <h4>Beneficio 6</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nihil molestiae nam veniam dicta hic blanditiis quod quis minus incidunt inventore quam odio quasi perspiciatis magnam, et labore tempore. Itaque.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const observer = new IntersectionObserver((entries, observer) =>{
+            entries.forEach(entry => {
+                if (entry.isIntersecting){
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            }
+            );
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.container-steps, .conteiner-benefit,.conteiner-benefit:nth-of-type(5), container-benefits').forEach(el =>{
+        })
+    </script>
+</body>
+</html>
